@@ -1,243 +1,218 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LHON Knowledge Hub</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LHON Knowledge Hub</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>LHON Knowledge Hub</h1>
-            </div>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#summary">Summary</a></li>
-                    <li><a href="#pathophysiology">Pathophysiology</a></li>
-                    <li><a href="#supplements">Supplements</a></li>
-                    <li><a href="#testosterone">Testosterone</a></li>
-                    <li><a href="#avoid">Avoid List</a></li>
-                    <li><a href="#recommendations">Actions</a></li>
-                    <li><a href="#journals">Journals</a></li>
-                    <li><a href="#studies">Clinical Studies</a></li>
-                </ul>
-                <button class="theme-toggle" id="themeToggle">☀️</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Welcome to the LHON Knowledge Hub</h1>
-            <p>Evidence-based information for LHON carriers and healthcare providers focused on maintaining vision health through proper management and avoidance of triggers.</p>
-            <div class="hero-buttons">
-                <a href="#summary" class="btn btn--primary">Start with Summary</a>
-                <a href="#pathophysiology" class="btn btn--secondary">Learn the Science</a>
-                <a href="#avoid" class="btn btn--outline">What to Avoid</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Summary Section -->
-    <section id="summary">
-        <div class="container">
-            <h2>Summary</h2>
-            <hr>
-            <div class="section-content">
-                <div id="summary-content"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pathophysiology Section -->
-    <section id="pathophysiology">
-        <div class="container">
-            <h2>Pathophysiology & Complex I</h2>
-            <hr>
-            <div class="section-content">
-                <div id="pathophysiology-overview"></div>
-                
-                <!-- Complex I Scientific Explanation -->
-                <div class="scientific-explanation">
-                    <h3>Complex I Function in Health vs. LHON</h3>
-                    
-                    <div class="explanation-content">
-                        <h4>Healthy Complex I Function</h4>
-                        <p>In healthy mitochondria, Complex I operates as the largest and most complex enzyme of the electron transport chain. It catalyzes the transfer of electrons from NADH to ubiquinone (CoQ10) through a sophisticated mechanism involving multiple iron-sulfur clusters and flavin mononucleotide (FMN). The process follows the "quinol-triggered semi-automatic shotgun model" where electron transfer is coupled to proton pumping across the inner mitochondrial membrane.</p>
-                        
-                        <p>The healthy Complex I structure contains 45 subunits, with 7 core subunits (ND1, ND2, ND3, ND4, ND4L, ND5, and ND6) encoded by mitochondrial DNA. These subunits form the proton-pumping machinery that creates the electrochemical gradient essential for ATP synthesis. The electron transfer occurs through a series of iron-sulfur clusters with minimal electron leakage and ROS production.</p>
-                        
-                        <h4>LHON Mutations and Complex I Dysfunction</h4>
-                        <p>LHON mutations primarily affect three critical subunits: ND1 (3460G>A), ND4 (11778G>A), and ND6 (14484T>C). These mutations disrupt the quinol-triggered mechanism in distinct ways:</p>
-                        
-                        <ul>
-                            <li><strong>ND4 mutations (11778G>A):</strong> Severely impair proton pumping by disrupting the coupling between electron transfer and proton translocation, reducing ATP synthesis by 60-80%</li>
-                            <li><strong>ND1 mutations (3460G>A):</strong> Block the quinone binding chamber, preventing proper electron transfer from the iron-sulfur clusters to ubiquinone</li>
-                            <li><strong>ND6 mutations (14484T>C):</strong> Disrupt Complex I assembly and stability, leading to reduced overall enzyme function</li>
-                        </ul>
-                        
-                        <p>The disrupted electron transport leads to electron leakage at the flavin site, generating excessive superoxide radicals. This ROS production overwhelms cellular antioxidant defenses, causing lipid peroxidation, mitochondrial DNA damage, and ultimately retinal ganglion cell apoptosis through the intrinsic apoptotic pathway.</p>
-                    </div>
-                </div>
-                
-                <div id="variant-differences-table"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Supplements & Therapies Section -->
-    <section id="supplements">
-        <div class="container">
-            <h2>Supplements & Therapeutic Strategies</h2>
-            <hr>
-            <div class="section-content">
-                <h3>Primary Evidence-Based Treatments</h3>
-                <p>Therapeutic options with strongest evidence for LHON carriers:</p>
-                <div id="supplements-primary-table"></div>
-                
-                <h3>Emerging / Limited-Evidence Options</h3>
-                <p>Supplements with preliminary evidence or theoretical benefit - discuss with your healthcare provider:</p>
-                <div id="supplements-secondary-table"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testosterone & Males Section -->
-    <section id="testosterone">
-        <div class="container">
-            <h2>Testosterone & Males</h2>
-            <hr>
-            <div class="section-content">
-                <div class="warning-box">
-                    <h3>⚠️ Critical Warning for Male LHON Carriers</h3>
-                    <p><strong>Supraphysiological testosterone levels may cause worsening of symptoms or trigger disease onset in LHON carriers.</strong> Male carriers considering testosterone therapy should be aware of the significant risks based on scientific evidence.</p>
-                </div>
-                
-                <div id="testosterone-content"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Avoid List Section -->
-    <section id="avoid">
-        <div class="container">
-            <h2>What LHON Carriers Should Avoid</h2>
-            <hr>
-            <div class="section-content">
-                <p>LHON carriers should avoid the following substances and behaviors that may increase disease penetrance or worsen symptoms:</p>
-                <div id="avoid-table"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommended Actions Section -->
-    <section id="recommendations">
-        <div class="container">
-            <h2>Recommended Actions for LHON Carriers</h2>
-            <hr>
-            <div class="section-content">
-                <!-- Timeline SVG -->
-                <div class="timeline-container">
-                    <svg viewBox="0 0 800 200" class="timeline-svg">
-                        <!-- Timeline line -->
-                        <line x1="50" y1="100" x2="750" y2="100" stroke="#1FB8CD" stroke-width="3"/>
-                        
-                        <!-- Daily -->
-                        <circle cx="150" cy="100" r="15" fill="#1FB8CD"/>
-                        <text x="150" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">D</text>
-                        <text x="150" y="130" text-anchor="middle" fill="var(--color-text)" font-size="14" font-weight="bold">Daily</text>
-                        
-                        <!-- Weekly -->
-                        <circle cx="300" cy="100" r="15" fill="#FFC185"/>
-                        <text x="300" y="105" text-anchor="middle" fill="#13343B" font-size="12" font-weight="bold">W</text>
-                        <text x="300" y="130" text-anchor="middle" fill="var(--color-text)" font-size="14" font-weight="bold">Weekly</text>
-                        
-                        <!-- Monthly -->
-                        <circle cx="450" cy="100" r="15" fill="#5D878F"/>
-                        <text x="450" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
-                        <text x="450" y="130" text-anchor="middle" fill="var(--color-text)" font-size="14" font-weight="bold">Monthly</text>
-                        
-                        <!-- Annual -->
-                        <circle cx="600" cy="100" r="15" fill="#B4413C"/>
-                        <text x="600" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">A</text>
-                        <text x="600" y="130" text-anchor="middle" fill="var(--color-text)" font-size="14" font-weight="bold">Annual</text>
-                    </svg>
-                </div>
-                
-                <div id="behaviors-tables"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Medical & Scientific Journals Section -->
-    <section id="journals">
-        <div class="container">
-            <h2>Medical & Scientific Journals</h2>
-            <hr>
-            <div class="section-content">
-                <p>Key scientific articles and journals with supporting evidence used in LHON research and treatment guidelines:</p>
-                <div id="journals-table"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clinical Studies Section -->
-    <section id="studies">
-        <div class="container">
-            <h2>Clinical Studies</h2>
-            <hr>
-            <div class="section-content">
-                <div id="studies-table"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Additional Resources Section -->
-    <section id="resources">
-        <div class="container">
-            <h2>Additional Resources</h2>
-            <hr>
-            <div class="section-content">
-                <div class="resource-grid">
-                    <div class="card">
-                        <div class="card__body">
-                            <h3>Genetic Counseling</h3>
-                            <p>Professional genetic counseling services for LHON families</p>
-                            <a href="https://www.nsgc.org/" target="_blank" class="btn btn--primary">Find Counselor</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__body">
-                            <h3>Low Vision Support</h3>
-                            <p>Rehabilitation services and assistive technologies</p>
-                            <a href="https://www.afb.org/" target="_blank" class="btn btn--primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__body">
-                            <h3>Patient Advocacy</h3>
-                            <p>LHON.org and UMDF patient support groups</p>
-                            <a href="https://www.umdf.org/" target="_blank" class="btn btn--primary">Get Support</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footnotes -->
-    <footer class="footnotes">
-        <div class="container">
-            <hr>
-            <p><strong>Disclaimer:</strong> This site is educational only and not a substitute for professional medical advice. Always consult with your healthcare provider before making any treatment decisions.</p>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
+<!-- Navigation -->
+<nav class="navbar">
+<div class="container">
+<button aria-label="Toggle navigation" class="nav-toggle"><span class="hamburger"></span></button><div class="nav-brand">
+<h1>LHON Knowledge Hub</h1>
+</div>
+<div class="nav-right">
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#pathophysiology">Pathophysiology</a></li>
+<li><a href="#supplements">Supplements</a></li>
+<li><a href="#testosterone">Testosterone</a></li>
+<li><a href="#avoid">Avoid List</a></li>
+<li><a href="#recommendations">Actions</a></li>
+<li><a href="#journals">Journals</a></li>
+<li><a href="#studies">Clinical Studies</a></li>
+</ul>
+<button class="theme-toggle" id="themeToggle">☀️</button>
+</div>
+</div>
+</nav>
+<!-- Home Section -->
+<section class="hero" id="home">
+<div class="container">
+<h1>Welcome to the LHON Knowledge Hub</h1>
+<p>Evidence-based information for LHON carriers and healthcare providers focused on maintaining vision health through proper management and avoidance of triggers.</p>
+<div class="hero-buttons">
+<a class="btn btn--primary" href="#summary">Start with Summary</a>
+<a class="btn btn--secondary" href="#pathophysiology">Learn the Science</a>
+<a class="btn btn--outline" href="#avoid">What to Avoid</a>
+</div>
+</div>
+</section>
+<!-- Summary Section -->
+<section id="summary">
+<div class="container">
+<h2>Summary</h2>
+<hr/>
+<div class="section-content">
+<div id="summary-content"></div>
+</div>
+</div>
+</section>
+<!-- Pathophysiology Section -->
+<section id="pathophysiology">
+<div class="container">
+<h2>Pathophysiology &amp; Complex I</h2>
+<hr/>
+<div class="section-content">
+<div id="pathophysiology-overview"></div>
+<!-- Complex I Scientific Explanation -->
+<div class="scientific-explanation">
+<h3>Complex I Function in Health vs. LHON</h3>
+<div class="explanation-content">
+<h4>Healthy Complex I Function</h4>
+<p>In healthy mitochondria, Complex I operates as the largest and most complex enzyme of the electron transport chain. It catalyzes the transfer of electrons from NADH to ubiquinone (CoQ10) through a sophisticated mechanism involving multiple iron-sulfur clusters and flavin mononucleotide (FMN). The process follows the "quinol-triggered semi-automatic shotgun model" where electron transfer is coupled to proton pumping across the inner mitochondrial membrane.</p>
+<p>The healthy Complex I structure contains 45 subunits, with 7 core subunits (ND1, ND2, ND3, ND4, ND4L, ND5, and ND6) encoded by mitochondrial DNA. These subunits form the proton-pumping machinery that creates the electrochemical gradient essential for ATP synthesis. The electron transfer occurs through a series of iron-sulfur clusters with minimal electron leakage and ROS production.</p>
+<h4>LHON Mutations and Complex I Dysfunction</h4>
+<p>LHON mutations primarily affect three critical subunits: ND1 (3460G&gt;A), ND4 (11778G&gt;A), and ND6 (14484T&gt;C). These mutations disrupt the quinol-triggered mechanism in distinct ways:</p>
+<ul>
+<li><strong>ND4 mutations (11778G&gt;A):</strong> Severely impair proton pumping by disrupting the coupling between electron transfer and proton translocation, reducing ATP synthesis by 60-80%</li>
+<li><strong>ND1 mutations (3460G&gt;A):</strong> Block the quinone binding chamber, preventing proper electron transfer from the iron-sulfur clusters to ubiquinone</li>
+<li><strong>ND6 mutations (14484T&gt;C):</strong> Disrupt Complex I assembly and stability, leading to reduced overall enzyme function</li>
+</ul>
+<p>The disrupted electron transport leads to electron leakage at the flavin site, generating excessive superoxide radicals. This ROS production overwhelms cellular antioxidant defenses, causing lipid peroxidation, mitochondrial DNA damage, and ultimately retinal ganglion cell apoptosis through the intrinsic apoptotic pathway.</p>
+</div>
+</div>
+<div id="variant-differences-table"></div>
+</div>
+</div>
+</section>
+<!-- Supplements & Therapies Section -->
+<section id="supplements">
+<div class="container">
+<h2>Supplements &amp; Therapeutic Strategies</h2>
+<hr/>
+<div class="section-content">
+<h3>Primary Evidence-Based Treatments</h3>
+<p>Therapeutic options with strongest evidence for LHON carriers:</p>
+<div id="supplements-primary-table"></div>
+<h3>Emerging / Limited-Evidence Options</h3>
+<p>Supplements with preliminary evidence or theoretical benefit - discuss with your healthcare provider:</p>
+<div id="supplements-secondary-table"></div>
+</div>
+</div>
+</section>
+<!-- Testosterone & Males Section -->
+<section id="testosterone">
+<div class="container">
+<h2>Testosterone &amp; Males</h2>
+<hr/>
+<div class="section-content">
+<div class="warning-box">
+<h3>⚠️ Critical Warning for Male LHON Carriers</h3>
+<p><strong>Supraphysiological testosterone levels may cause worsening of symptoms or trigger disease onset in LHON carriers.</strong> Male carriers considering testosterone therapy should be aware of the significant risks based on scientific evidence.</p>
+</div>
+<div id="testosterone-content"></div>
+</div>
+</div>
+</section>
+<!-- Avoid List Section -->
+<section id="avoid">
+<div class="container">
+<h2>What LHON Carriers Should Avoid</h2>
+<hr/>
+<div class="section-content">
+<p>LHON carriers should avoid the following substances and behaviors that may increase disease penetrance or worsen symptoms:</p>
+<div id="avoid-table"></div>
+</div>
+</div>
+</section>
+<!-- Recommended Actions Section -->
+<section id="recommendations">
+<div class="container">
+<h2>Recommended Actions for LHON Carriers</h2>
+<hr/>
+<div class="section-content">
+<!-- Timeline SVG -->
+<div class="timeline-container">
+<svg class="timeline-svg" viewbox="0 0 800 200">
+<!-- Timeline line -->
+<line stroke="#1FB8CD" stroke-width="3" x1="50" x2="750" y1="100" y2="100"></line>
+<!-- Daily -->
+<circle cx="150" cy="100" fill="#1FB8CD" r="15"></circle>
+<text fill="white" font-size="12" font-weight="bold" text-anchor="middle" x="150" y="105">D</text>
+<text fill="var(--color-text)" font-size="14" font-weight="bold" text-anchor="middle" x="150" y="130">Daily</text>
+<!-- Weekly -->
+<circle cx="300" cy="100" fill="#FFC185" r="15"></circle>
+<text fill="#13343B" font-size="12" font-weight="bold" text-anchor="middle" x="300" y="105">W</text>
+<text fill="var(--color-text)" font-size="14" font-weight="bold" text-anchor="middle" x="300" y="130">Weekly</text>
+<!-- Monthly -->
+<circle cx="450" cy="100" fill="#5D878F" r="15"></circle>
+<text fill="white" font-size="12" font-weight="bold" text-anchor="middle" x="450" y="105">M</text>
+<text fill="var(--color-text)" font-size="14" font-weight="bold" text-anchor="middle" x="450" y="130">Monthly</text>
+<!-- Annual -->
+<circle cx="600" cy="100" fill="#B4413C" r="15"></circle>
+<text fill="white" font-size="12" font-weight="bold" text-anchor="middle" x="600" y="105">A</text>
+<text fill="var(--color-text)" font-size="14" font-weight="bold" text-anchor="middle" x="600" y="130">Annual</text>
+</svg>
+</div>
+<div id="behaviors-tables"></div>
+</div>
+</div>
+</section>
+<!-- Medical & Scientific Journals Section -->
+<section id="journals">
+<div class="container">
+<h2>Medical &amp; Scientific Journals</h2>
+<hr/>
+<div class="section-content">
+<p>Key scientific articles and journals with supporting evidence used in LHON research and treatment guidelines:</p>
+<div id="journals-table"></div>
+</div>
+</div>
+</section>
+<!-- Clinical Studies Section -->
+<section id="studies">
+<div class="container">
+<h2>Clinical Studies</h2>
+<hr/>
+<div class="section-content">
+<div id="studies-table"></div>
+</div>
+</div>
+</section>
+<!-- Additional Resources Section -->
+<section id="resources">
+<div class="container">
+<h2>Additional Resources</h2>
+<hr/>
+<div class="section-content">
+<div class="resource-grid">
+<div class="card">
+<div class="card__body">
+<h3>Genetic Counseling</h3>
+<p>Professional genetic counseling services for LHON families</p>
+<a class="btn btn--primary" href="https://www.nsgc.org/" target="_blank">Find Counselor</a>
+</div>
+</div>
+<div class="card">
+<div class="card__body">
+<h3>Low Vision Support</h3>
+<p>Rehabilitation services and assistive technologies</p>
+<a class="btn btn--primary" href="https://www.afb.org/" target="_blank">Learn More</a>
+</div>
+</div>
+<div class="card">
+<div class="card__body">
+<h3>Patient Advocacy</h3>
+<p>LHON.org and UMDF patient support groups</p>
+<a class="btn btn--primary" href="https://www.umdf.org/" target="_blank">Get Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footnotes -->
+<footer class="footnotes">
+<div class="container">
+<hr/>
+<p><strong>Disclaimer:</strong> This site is educational only and not a substitute for professional medical advice. Always consult with your healthcare provider before making any treatment decisions.</p>
+</div>
+</footer>
+<script src="app.js"></script>
 </body>
 </html>

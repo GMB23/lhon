@@ -31,8 +31,7 @@ const appData = {
   },
 
   // Primary supplements with strong evidence
-  supplementsPrimary: [
-    {
+  supplementsPrimary: [{
       name: "Idebenone (Raxone®)",
       evidence: "A",
       dosage: "900 mg/day (300 mg × 3)",
@@ -63,12 +62,20 @@ const appData = {
       mechanism: "Redox cofactor, enhances glutathione pool",
       status: "Investigational",
       link: "https://pubmed.ncbi.nlm.nih.gov/22410442/"
-    }
+    },
+
+{
+  name: "Elamipretide (SS-31)",
+  evidence: "B",
+  dosage: "40 mg/day subcutaneous",
+  mechanism: "Tetrapeptide binds cardiolipin to stabilize mitochondrial inner membrane, reduces ROS and improves ATP production",
+  status: "Investigational in mitochondrial disease trials",
+  link: "https://pubmed.ncbi.nlm.nih.gov/30224944/"
+}
   ],
 
   // Limited evidence supplements
-  supplementsSecondary: [
-    {
+  supplementsSecondary: [{
       name: "Acetyl-L-Carnitine (ALCAR)",
       evidence: "C",
       dosage: "250-500 mg/day",
@@ -107,6 +114,54 @@ const appData = {
       mechanism: "Glutathione precursor, antioxidant",
       status: "Limited evidence",
       link: "https://pubmed.ncbi.nlm.nih.gov/34903999/"
+    },
+{
+      name: "Humanin",
+      evidence: "C",
+      dosage: "5 mg/day subcutaneous",
+      mechanism: "Mitochondrial-derived peptide that blocks Bax-mediated apoptosis, antioxidant",
+      status: "Experimental",
+      link: "https://www.frontiersin.org/articles/10.3389/fendo.2023.1120533/full"
+    },
+    {
+      name: "MOTS-c",
+      evidence: "C",
+      dosage: "5 mg/day subcutaneous",
+      mechanism: "Activates AMPK, enhances mitochondrial biogenesis and metabolic resilience",
+      status: "Experimental",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11268520/"
+    },
+    {
+      name: "SHLPs 1-6",
+      evidence: "C",
+      dosage: "Variable (preclinical)",
+      mechanism: "Small humanin-like peptides that modulate mitochondrial metabolism and reduce ROS",
+      status: "Preclinical",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4925829/"
+    },
+    {
+      name: "Epitalon",
+      evidence: "C",
+      dosage: "10 mg/day subcutaneous for 10 days (cycle)",
+      mechanism: "Tetrapeptide from pineal gland analogue; antioxidant, increases telomerase",
+      status: "Experimental anti-aging",
+      link: "https://pubmed.ncbi.nlm.nih.gov/40141333/"
+    },
+    {
+      name: "FOXO4-DRI",
+      evidence: "C",
+      dosage: "5 mg/kg weekly (preclinical)",
+      mechanism: "Senolytic peptide disrupting FOXO4-p53 to clear senescent cells and lower ROS",
+      status: "Preclinical",
+      link: "https://pubmed.ncbi.nlm.nih.gov/28388405/"
+    },
+    {
+      name: "5-Amino-1MQ",
+      evidence: "C",
+      dosage: "50-150 mg/day oral (research)",
+      mechanism: "NNMT inhibitor that raises NAD+ and boosts fat oxidation and mitochondrial metabolism",
+      status: "Preclinical metabolic health",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5826726/"
     }
   ],
 
@@ -641,3 +696,13 @@ function renderStudies() {
     <tbody>${rows}</tbody>
   </table>`;
 }
+// Responsive navbar toggle
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
+})();

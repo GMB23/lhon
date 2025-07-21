@@ -1674,3 +1674,52 @@ li {
   font-family: 'FKGroteskNeue';
   src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
 }
+
+/* Responsive Navbar */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  display: block;
+  position: relative;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  left: 0;
+}
+.nav-toggle .hamburger::before { top: -8px; }
+.nav-toggle .hamburger::after { top: 8px; }
+
+@media (max-width: 768px) {
+  .nav-right {
+    width: 100%;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}
