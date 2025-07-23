@@ -182,6 +182,20 @@ const appData = {
 
   // Things to avoid
   avoidList: [
+      {
+      category: "Hormone",
+      item: "Dehydroepiandrosterone (DHEA)",
+      riskLevel: "High",
+      explanation: "Directly inhibits function of Complex I",
+      link: "https://pubmed.ncbi.nlm.nih.gov/16849397/"
+    },
+      {
+      category: "Diabetes Support",
+      item: "Metformin",
+      riskLevel: "High",
+      explanation: "Directly inhibits function of Complex I",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5783883/"
+    },
     {
       category: "Antibiotics",
       item: "Chloramphenicol",
