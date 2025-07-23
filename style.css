@@ -1710,7 +1710,6 @@ li {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #fff;
   }
   .nav-links.open {
     display: flex;
