@@ -32,7 +32,7 @@ const appData = {
 
   // Primary supplements with strong evidence
   supplementsPrimary: [{
-      name: "Idebenone (Raxone®)",
+      name: "<a href='https://idebenone.net/' target='_blank'>Idebenone </a>(Raxone®)",
       evidence: "A",
       dosage: "900 mg/day (300 mg × 3)",
       mechanism: "Bypasses Complex I dysfunction, restores cellular ATP production",
@@ -183,7 +183,7 @@ const appData = {
   // Things to avoid
   avoidList: [
       {
-      category: "Hormone",
+      category: "Hormones",
       item: "Dehydroepiandrosterone (DHEA)",
       riskLevel: "High",
       explanation: "Directly inhibits function of Complex I",
